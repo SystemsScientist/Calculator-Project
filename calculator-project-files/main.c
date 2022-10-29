@@ -2,6 +2,8 @@
 
 #include <stdio.h>
 
+int add(int, int);
+
 int main(void) {
 
 	float num1, num2;
@@ -13,9 +15,15 @@ int main(void) {
 	printf("Enter the second number: ");
 	scanf("%f", &num2);
 
-	sum_result = num1 + num2;
+	sum_result = add(num1, num2);
 
 	printf("Sum of %.2f and %.2f is %.2f\n", num1, num2, sum_result);
 
 	return 0;
+}
+
+int add(int x, int y) {
+
+	return x + y;
+
 }
